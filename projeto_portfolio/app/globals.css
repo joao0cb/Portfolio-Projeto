@@ -1,5 +1,5 @@
 body {
-    background-color: #3b3b3b;
+    background-color: #525252;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,12 +12,11 @@ body {
     display: flex;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 20px 0px 20px 0px;
 }
 
 .menu li {
     margin: 0 15px;
-    margin-top: 10px;
 }
 
 .menu a {
@@ -29,6 +28,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.fotoTexto {
+    padding: 10px;
 }
 
 .fotoJoao {
@@ -51,7 +54,6 @@ body {
 .textoDestaque {
     color: white;
     font-size: clamp(30px, 5vw, 55px);
-    text-shadow: 1px 1px 1px black;
     margin: 0;
     margin-bottom: 5px;
 }
@@ -66,7 +68,7 @@ body {
 }
 
 .bio {
-    padding: 15px;
+    padding: 15px 15px 15px 15px;
     text-align: justify;
     margin: 0;
     color: white;
@@ -89,4 +91,59 @@ body {
 
 .email {
     padding-top: 10px;
+}
+
+.projetos {
+    display: flex;
+    background-color: #464646;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.textosProjetos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tituloProjetos {
+    color: white;
+    font-size: clamp(30px, 5vw, 55px);
+    margin: 10px;
+}
+
+.textoProjetos {
+    padding: 15px 15px 15px 15px;
+    text-align: justify;
+    margin: 0;
+    color: white;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #525252;
+    border-radius: 25px;
+}
+
+.cardMusicap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.divMusicap {
+    width: 70%;
+    border-radius: 30px;
+}
+
+.fotoMusicap {
+    max-width: 100%;
+    height: auto;
 }
