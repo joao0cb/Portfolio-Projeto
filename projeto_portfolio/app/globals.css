@@ -1,0 +1,92 @@
+body {
+    background-color: #3b3b3b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 0 15px;
+    margin-top: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.divFotoJoao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fotoJoao {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.textoTopo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.textoDestaque {
+    color: white;
+    font-size: clamp(30px, 5vw, 55px);
+    text-shadow: 1px 1px 1px black;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.joaovictor {
+    color: #163f2d;
+}
+
+.descricao {
+    margin: 0;
+    color: white;
+}
+
+.bio {
+    padding: 15px;
+    text-align: justify;
+    margin: 0;
+    color: white;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 40px;
+    padding: 0 10px;
+}
+
+.github {
+    padding-top: 2px;
+}
+
+.email {
+    padding-top: 10px;
+}
