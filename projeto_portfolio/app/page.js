@@ -1,4 +1,24 @@
+"use client"
+import { useRef } from "react"
+
 export default function Home() {
+
+  const carouselRef = useRef(null)
+
+  const scrollLeft = () => {
+    carouselRef.current.scrollBy({
+      left: -270.45,
+      behavior: "smooth"
+    })
+  }
+
+  const scrollRight = () => {
+    carouselRef.current.scrollBy({
+      left: 270.45,
+      behavior: "smooth"
+    })
+  }
+
   return (
     <>
       <header>
@@ -61,27 +81,139 @@ export default function Home() {
               habilidades em programação e desenvolvimento.
             </p>
           </div>
+          <div className="cardsContainer">
+            <button className="btnCarrosel esquerda" onClick={scrollLeft}>
+              ᐸ
+            </button>
+            
+            <div className="cards" ref={carouselRef}>
 
-          <div className="cards">
-            <div className="card">
+              <div className="card">
 
-              <div className="cardImagem">
-                <img src="/musicap.png" alt="Projeto Musicap"/>
-              </div>
-
-              <div className="cardConteudo">
-                <p className="tituloProjeto">
-                  Projeto Musicap
-                </p>
-
-                <div className="tags">
-                  <span className="tag">Java</span>
-                  <span className="tag">MySQL</span>
-                  <span className="tag">FXML</span>
+                <div className="cardImagem">
+                  <img src="/jogodaforca.jpg" alt="Jogo da Forca"/>
                 </div>
 
+                <div className="cardConteudo">
+                  <p className="tituloProjeto">
+                    Jogo da Forca
+                  </p>
+
+                  <div className="tags">
+                    <span className="tag">C</span>
+                  </div>
+
+                </div>
+              </div>
+
+              <div className="card">
+
+                <div className="cardImagem">
+                  <img src="/musicap.png" alt="Musicap"/>
+                </div>
+
+                <div className="cardConteudo">
+                  <p className="tituloProjeto">
+                    Projeto Musicap
+                  </p>
+                  <p className="conteudoProjeto">
+                    O Musicap é um app de registro e avaliação de músicas.
+                  </p>
+
+                  <div className="tags">
+                    <span className="tag">Java</span>
+                    <span className="tag">MySQL</span>
+                    <span className="tag">FXML</span>
+                  </div>
+
+                </div>
+              </div>
+
+              <div className="card">
+
+                <div className="cardImagem">
+                  <img src="/coliceu.jpeg" alt="Projeto Coliceu"/>
+                </div>
+
+                <div className="cardConteudo">
+                  <p className="tituloProjeto">
+                    Projeto Coliceu
+                  </p>
+
+                  <div className="tags">
+                    <span className="tag">Kotlin</span>
+                  </div>
+
+                </div>
+              </div>
+
+              <div className="card">
+
+                <div className="cardImagem">
+                  <img src="/patasnarua.png" alt="Patas Na Rua"/>
+                </div>
+
+                <div className="cardConteudo">
+                  <p className="tituloProjeto">
+                    Patas Na Rua
+                  </p>
+
+                  <div className="tags">
+                    <span className="tag">Django</span>
+                    <span className="tag">Python</span>
+                    <span className="tag">MySQL</span>
+                    <span className="tag">HTML</span>
+                    <span className="tag">CSS</span>
+                    <span className="tag">JavaScrip</span>
+                  </div>
+
+                </div>
+              </div>
+
+              <div className="card">
+
+                <div className="cardImagem">
+                  <img src="/bdd.png" alt="Banco de Dados MySQL"/>
+                </div>
+
+                <div className="cardConteudo">
+                  <p className="tituloProjeto">
+                    Projeto Banco de Dados
+                  </p>
+
+                  <div className="tags">
+                    <span className="tag">Python</span>
+                    <span className="tag">MySQL</span>
+                  </div>
+
+                </div>
+              </div>
+
+              <div className="card">
+
+                <div className="cardImagem">
+                  <img src="/tabelahash.jpg" alt="Tabela Hash"/>
+                </div>
+
+                <div className="cardConteudo">
+                  <p className="tituloProjeto">
+                    Projeto Banco de Dados
+                  </p>
+                  <p className="conteudoProjeto">
+                    Um sistema 
+                  </p>
+
+                  <div className="tags">
+                    <span className="tag">C</span>
+                  </div>
+
+                </div>
               </div>
             </div>
+
+            <button className="btnCarrosel direita" onClick={scrollRight}>
+              ᐳ
+            </button>
           </div>
         </section>
 
