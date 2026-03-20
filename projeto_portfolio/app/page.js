@@ -157,6 +157,51 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+
+        <div></div>
+
+
+
+
+
+
+        <div className="contato">
+          <h2>Contato</h2>
+          <p>Entre em contato bla bla bla</p>
+          <div className="cardContato">
+            <div className="infoContato">
+              <h3>Informações de Contato</h3>
+              <div className="links">
+                <a href="mailto:joaovictorcastelobranco123@gmail.com" className="linkEmail">
+                  <img src="#" className="imgLinkEmail"></img>
+                  <p>joaovictorcastelobranco123@gmail.com</p>
+                </a>
+                <div className="redes">
+                  <a className="linksRedes">
+                    <img src="/github.svg"></img>
+                  </a>
+                  <a className="linksRedes">
+                    <img src="/linkedin.svg"></img>
+                  </a>
+                  <a src="mailto:joaovictorcastelobranco123@gmail.com" className="linksRedes">
+                    <img src="/email.svg"></img>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="envieMsg">
+              <h3>Envie uma Mensagem</h3>
+              <form>
+                <input placeholder="Seu nome"></input>
+                <input placeholder="Seu email"></input>
+                <input type="textarea" placeholder="Sua mensagem"></input>
+                <button>Enviar Mensagem</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
       </main>
     </>
   )

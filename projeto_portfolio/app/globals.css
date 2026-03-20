@@ -220,3 +220,19 @@ h1 {
     padding: 4px 12px;
     border-radius: 4px;
 }
+
+.contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*background-image: url(/bg.png);*/
+
+}
+
+.cardContato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
