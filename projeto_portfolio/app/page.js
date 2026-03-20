@@ -48,7 +48,7 @@ export default function Home() {
           </div>
         </div>
         <div className="sobreMim">
-          <h2 className="tituloSobreMim">Sobre Mim</h2>
+          <h2 className="titulos">Sobre Mim</h2>
           <div className="destaques">
             <div className="cardDestaque">
               <div className="imgDev">
@@ -59,7 +59,7 @@ export default function Home() {
             </div>
             <div className="cardDestaque">
               <div className="imgDev">
-                <img src="/aquarela.png"></img>
+                <img src="/aquarela.svg"></img>
               </div>
               <h3 className="titulo">Design</h3>
               <p className="textoCard">Interfaces intuitivas e experiências memoráveis</p>
@@ -80,6 +80,81 @@ export default function Home() {
               proativo, foco em aprendizado contínuo e interesse em atuar em projetos reais, buscando uma oportunidade 
               de estágio para gerar impacto e crescer profissionalmente.
             </p>
+          </div>
+        </div>
+        <div className="habilidades">
+          <h2 className="titulos">Habilidades</h2>
+          <p className="textoHabilidades">Um conjunto abrangente de tecnologias e ferramentas que utilizo para dar vida às minhas ideias.</p>
+          <div className="cardsHabilidades">
+            <div className="cardHabilidade">
+              <div className="topoCardHab">
+                <div className="imgCardHab">
+                  <img src="/frontend.svg"></img>
+                </div>
+                <h3>Frontend</h3>
+              </div>
+              <div className="skills">
+                <span className="skill">React</span>
+                <span className="skill">TypeScript</span>
+                <span className="skill">Next.js</span>
+                <span className="skill">HTML</span>
+                <span className="skill">CSS</span>
+              </div>
+            </div>
+            <div className="cardHabilidade">
+              <div className="topoCardHab">
+                <div className="imgCardHab">
+                  <img src="/server.svg"></img>
+                </div>
+                <h3>Backend</h3>
+              </div>
+              <div className="skills">
+                <span className="skill">Python</span>
+                <span className="skill">Django</span>
+                <span className="skill">FastAPI</span>
+                <span className="skill">Node.js</span>
+              </div>
+            </div>
+            <div className="cardHabilidade">
+              <div className="topoCardHab">
+                <div className="imgCardHab">
+                  <img src="/database.svg"></img>
+                </div>
+                <h3>Database</h3>
+              </div>
+              <div className="skills">
+                <span className="skill">PostgreeSQL</span>
+                <span className="skill">MySQL</span>
+              </div>
+            </div>
+            <div className="cardHabilidade">
+              <div className="topoCardHab">
+                <div className="imgCardHab">
+                  <img src="/tool.svg"></img>
+                </div>
+                <h3>Tools</h3>
+              </div>
+              <div className="skills">
+                <span className="skill">Git</span>
+                <span className="skill">Github</span>
+                <span className="skill">Trello</span>
+                <span className="skill">Figma</span>
+              </div>
+            </div>
+            <div className="cardHabilidade">
+              <div className="topoCardHab">
+                <div className="imgCardHab">
+                  <img src="/terminal.svg"></img>
+                </div>
+                <h3>Languages</h3>
+              </div>
+              <div className="skills">
+                <span className="skill">Python</span>
+                <span className="skill">Java</span>
+                <span className="skill">C</span>
+                <span className="skill">Kotlin</span>
+              </div>
+            </div>
           </div>
         </div>
       </main>

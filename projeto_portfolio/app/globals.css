@@ -82,10 +82,10 @@ h1 {
     align-items: center;
     flex-direction: column;
     background-color: white;
-    padding: 75px 16px 0;
+    padding: 60px 16px 0;
 }
 
-.tituloSobreMim {
+.titulos {
     font-size: clamp(40px, 4vw, 65px);
 }
 
@@ -143,10 +143,80 @@ h1 {
     background-color: #f3f5ff;
     padding: 30px;
     border-radius: 20px;
-    margin: 20px 0;
+    margin: 20px 0 75px 0;
+
 }
 
 .textoSobreMim {
     font-size: 19px;
     text-align: justify;
+}
+
+.habilidades {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    background-color: #f9fafb;
+    padding: 60px 16px 0;
+}
+
+.textoHabilidades {
+    font-size: 18px;
+    text-align: center;
+}
+
+.cardsHabilidades {
+    display: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.cardHabilidade {
+    display: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 24px;
+    width: 100%;
+    border: 1px solid #cdced1 ;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.topoCardHab {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+    margin-bottom: 16px;
+}
+
+.imgCardHab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 9px;
+    background-color: #9810fa;
+    border-radius: 10px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills span {
+    background-color: #e8e9eb;
+    padding: 4px 12px;
+    border-radius: 4px;
 }
