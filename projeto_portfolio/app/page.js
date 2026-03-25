@@ -66,7 +66,7 @@ export default function Home() {
             </div>
             <div className="cardDestaque">
               <div className="imgDev">
-                <img src="/foguete.png" className="foguete"></img>
+                <img src="/foguete.svg" className="foguete"></img>
               </div>
               <h3 className="titulo">Inovação</h3>
               <p className="textoCard">Sempre buscando novas tecnologias e soluções</p>
