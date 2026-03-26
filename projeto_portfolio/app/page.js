@@ -167,37 +167,38 @@ export default function Home() {
 
 
         <div className="contato">
-          <h2>Contato</h2>
-          <p>Entre em contato bla bla bla</p>
+          <h2 >Vamos Conversar?</h2>
+          <p className="textoContato">Estou sempre aberto a novos projetos e oportunidades. Entre em contato!</p>
           <div className="cardContato">
             <div className="infoContato">
               <h3>Informações de Contato</h3>
-              <div className="links">
-                <a href="mailto:joaovictorcastelobranco123@gmail.com" className="linkEmail">
-                  <img src="#" className="imgLinkEmail"></img>
-                  <p>joaovictorcastelobranco123@gmail.com</p>
+              <a href="mailto:joaovictorcastelobranco123@gmail.com" className="linkEmail">
+                <img src="email.svg" className="imgLinkEmail"></img>
+                <p>joaovictorcastelobranco123@gmail.com</p>
+              </a>
+              <div className="redes">
+                <a href="https://github.com/joao0cb" target="_blank" className="linksRedes">
+                  <img src="/github.svg"></img>
                 </a>
-                <div className="redes">
-                  <a className="linksRedes">
-                    <img src="/github.svg"></img>
-                  </a>
-                  <a className="linksRedes">
-                    <img src="/linkedin.svg"></img>
-                  </a>
-                  <a src="mailto:joaovictorcastelobranco123@gmail.com" className="linksRedes">
-                    <img src="/email.svg"></img>
-                  </a>
-                </div>
+                <a href="https://www.linkedin.com/in/jo%C3%A3o-victor-castelo-branco-de-sena-20b624312/" target="_blank" className="linksRedes">
+                  <img src="/linkedin.svg"></img>
+                </a>
+                <a href="https://www.instagram.com/joaoo.cb/" target="_blank" className="linksRedes">
+                  <img src="/insta.svg"></img>
+                </a>
               </div>
             </div>
             <div className="envieMsg">
               <h3>Envie uma Mensagem</h3>
-              <form>
+              <form className="formulario">
                 <input placeholder="Seu nome"></input>
                 <input placeholder="Seu email"></input>
-                <input type="textarea" placeholder="Sua mensagem"></input>
-                <button>Enviar Mensagem</button>
+                <textarea placeholder="Sua mensagem" className="suaMsg"></textarea>
+                <button className="btnEnviarMsg">Enviar Mensagem</button>
               </form>
+            </div>
+            <div className="footer">
+              <p className="direitosR">© 2026 João Victor. Todos os direitos reservados.</p>
             </div>
           </div>
         </div>
