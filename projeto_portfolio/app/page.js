@@ -33,6 +33,7 @@ export default function Home() {
                   <li><a href="#">Habilidades</a></li>
                   <li><a href="#">Projetos</a></li>
                   <li><a href="#">Contato</a></li>
+                  <li><a href="#">Jogo da Forca</a></li>
                 </ul>
               </nav>
             </div>
@@ -159,7 +160,23 @@ export default function Home() {
         </div>
 
 
-        <div></div>
+        <div className="projetos">
+          <h2 className="titulos">Projetos</h2>
+          <p className="textoHabilidades">Falando sobre projetos bla bla bla</p>
+          <div className="carrosel">
+            <div className="cardProjeto">
+              <div className="imgProjeto">
+                <img src="#" ></img>
+              </div>
+              <h3>Nome do Projeto</h3>
+              <p>Descrição do projeto bla bla bla bla bla</p>
+              <button href="#">
+                <img src="/github.svg"></img>
+                <span>Code</span>
+              </button>
+            </div>
+          </div>
+        </div>
 
 
 

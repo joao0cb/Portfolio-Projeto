@@ -369,3 +369,30 @@ h1 {
     font-size: 15px;
     color: #e0caf6;
 }
+
+.projetos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    flex-direction: column;
+}
+
+.carrosel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.cardProjeto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #cdced1 ;
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    max-width: 300px;
+}
