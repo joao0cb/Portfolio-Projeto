@@ -179,8 +179,8 @@ h1 {
 
 .cardHabilidade {
     display: center;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
     padding: 24px;
     width: 100%;
@@ -323,7 +323,7 @@ h1 {
 
 .formulario input {
     background-color: rgba(255, 255, 255, 0.15);
-    border: 2px solid gray;
+    border: 2px solid white;
     border-radius: 10px;
     width: 100%;
     height: 40px;
@@ -333,7 +333,7 @@ h1 {
 
 .formulario textarea {
     background-color: rgba(255, 255, 255, 0.15);
-    border: 2px solid gray;
+    border: 2px solid white;
     border-radius: 10px;
     width: 100%;
     height: 40px;
@@ -376,23 +376,263 @@ h1 {
     align-items: center;
     background-color: white;
     flex-direction: column;
+    padding: 60px 0 60px;
+    gap: 20px;
 }
 
-.carrosel {
+.projetos h2,
+.projetos .textoHabilidades {
+    padding: 0 16px;
+}
+
+.carrossel {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;   
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 16px;
+    width: 100%;
+}
+
+.carrossel::-webkit-scrollbar {
+    display: none;
+}
+
+.cardProjeto {
+    flex-shrink: 0;
+    width: 300px;
+    min-width: 300px;
+    background: #f3f5ff;
+    border: 1px solid #cdced1;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 15px;
+}
+
+.imgProjeto {
+    width: 300px;
+    height: 185px;
+    max-width: 300px;
+    max-height: 185;
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+
+.imgProjeto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardProjeto h3 {
+    padding: 0 20px;
+}
+
+.cardProjeto p {
+    padding: 0 20px;
+}
+
+.linkGithubProjeto a {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    padding: 0 0 15px 35px;
 }
 
-.cardProjeto {
+/* ========== 768px ========== */
+@media (min-width: 768px) {
+
+  .sobreMim,
+  .habilidades,
+  .projetos,
+  .contato {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .projetos {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .projetos h2,
+  .projetos .textoHabilidades {
+    padding: 0;
+  }
+
+  .carrossel {
+    padding: 10px 0;
+  }
+
+  .bio {
+    max-width: 600px;
+  }
+
+  .divTextoSobreMim {
+    padding: 40px;
+  }
+
+  .cardsHabilidades {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .cardHabilidade {
+    margin-bottom: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    border: 1px solid #cdced1 ;
-    border-radius: 20px;
-    padding: 20px;
-    width: 300px;
-    max-width: 300px;
+  }
+
+  .infoContato p {
+    font-size: 16px;
+  }
+}
+
+/* ========== 1024px ========== */
+@media (min-width: 1024px) {
+
+  .sobreMim,
+  .habilidades,
+  .projetos,
+  .contato {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .projetos h2,
+  .projetos .textoHabilidades {
+    padding: 0;
+  }
+
+  .habilidades {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .bio {
+    max-width: 750px;
+  }
+
+  .destaques {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .cardDestaque {
+    flex: 1;
+  }
+  .cardsHabilidades {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cardHabilidade {
+    width: 250px;
+    min-width: 250px;
+    min-height: 200px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .carrossel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-x: visible;
+    gap: 20px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .cardProjeto {
+    width: 100%;
+    min-width: unset;
+    scroll-snap-align: unset;
+  }
+
+  .imgProjeto {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cardContato {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .infoContato,
+  .envieMsg {
+    flex: 1;
+    height: 362px;
+    align-items: flex-start;
+    justify-content:flex-start;
+  }
+
+  .footer {
+    width: 100%;
+  }
+}
+
+/* ========== 1280px ========== */
+@media (min-width: 1280px) {
+
+  .sobreMim,
+  .habilidades,
+  .projetos,
+  .contato {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+
+  .foto {
+    width: 220px;
+    height: 220px;
+  }
+
+  .bio {
+    max-width: 860px;
+    font-size: 20px;
+  }
+
+  .textoSobreMim {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+
+  .cardsHabilidades {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cardHabilidade {
+    width: 350px;
+    height: 168px;
+    min-width: 350px;
+    min-height: 168px;
+  }
+
+  .carrossel {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .cardContato {
+    gap: 30px;
+  }
+
+  .infoContato,
+  .envieMsg {
+    padding: 40px;
+    height: 382px;
+    align-items: flex-start;
+    justify-content:flex-start;
+  }
 }
