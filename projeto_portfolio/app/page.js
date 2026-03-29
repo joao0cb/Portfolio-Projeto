@@ -1,26 +1,75 @@
 "use client"
-import { useRef } from "react"
+import { useState, useEffect } from "react"
+import styles from "./page_module.css";
 
 export default function Home() {
+  const [menuAberto, setMenuAberto] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const [rolou, setRolou] = useState(false)       // ativa o vidro
+  const [noSobre, setNoSobre] = useState(false)   // ativa a fonte preta
+  const [nome, setNome] = useState("")
+  const [email, setEmail] = useState("")
+  const [mensagem, setMensagem] = useState("")
+
+  const enviarMailto = (e) => {
+    e.preventDefault()
+    window.location.href = `mailto:joaovictorcastelobranco123@gmail.com?subject=Mensagem de ${nome} (${email})&body=${encodeURIComponent(mensagem)}`
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sobre = document.getElementById("sobre")
+      if (sobre) {
+        setRolou(window.scrollY > 50)
+        setNoSobre(sobre.getBoundingClientRect().top <= 70)
+      }
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  const links = [
+    { href: "#inicio", label: "Início" },
+    { href: "#sobre", label: "Sobre" },
+    { href: "#habilidades", label: "Habilidades" },
+    { href: "#projetos", label: "Projetos" },
+    { href: "#contato", label: "Contato" },
+    { href: "#jogo", label: "Jogo da Forca" },
+  ]
+
   return (
     <>
       <main className="container">
-        <div className="intro">
-          <div className="topo">
-            JS
-            <div>
-              <nav>
-                <ul>
-                  <li><a href="#">Início</a></li>
-                  <li><a href="#">Sobre</a></li>
-                  <li><a href="#">Habilidades</a></li>
-                  <li><a href="#">Projetos</a></li>
-                  <li><a href="#">Contato</a></li>
-                  <li><a href="#">Jogo da Forca</a></li>
-                </ul>
-              </nav>
-            </div>
+        <div className="intro" id="inicio">
+          <div className={`overlay ${menuAberto ? "aberto" : ""}`} onClick={() => setMenuAberto(false)}/>
+          <nav className={`menuMobile ${menuAberto ? "aberto" : ""}`}>
+            <button className="btnFechar" onClick={() => setMenuAberto(false)}>✕</button>
+            <ul>
+              {links.map((l) => (
+                <li key={l.label}>
+                  <a href={l.href} onClick={() => setMenuAberto(false)}>{l.label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <div className={`topo ${rolou ? "scrolled" : ""} ${noSobre ? "noSobre" : ""}`}>
+            <span className="logo">JV.</span>
+            <nav className="navDesktop">
+              <ul>
+                {links.map((l) => (
+                  <li key={l.label}><a href={l.href}>{l.label}</a></li>
+                ))}
+              </ul>
+            </nav>
+
+            <button className={`btnMenu ${menuAberto ? "escondido" : ""}`} onClick={() => setMenuAberto(true)} aria-label="Abrir menu">
+              <span />
+              <span />
+              <span />
+            </button>
           </div>
+
           <div className="info">
             <div className="foto">
               <img src="/fotojoao.jpg" alt="Foto de João" className="icon"></img>
@@ -31,9 +80,10 @@ export default function Home() {
                 e buscando novas formas de resolver desafios reais.</p>
           </div>
         </div>
-        <div className="sobreMim">
+        <div className="sobreMim" id="sobre">
           <h2 className="titulos">Sobre Mim</h2>
           <div className="destaques">
+
             <div className="cardDestaque">
               <div className="imgDev">
                 <img src="/dev.png"></img>
@@ -41,6 +91,7 @@ export default function Home() {
               <h3 className="titulo">Desenvolvimento</h3>
               <p className="textoCard">Código limpo e escalável com as melhores práticas</p>
             </div>
+
             <div className="cardDestaque">
               <div className="imgDev">
                 <img src="/aquarela.svg"></img>
@@ -48,6 +99,7 @@ export default function Home() {
               <h3 className="titulo">Design</h3>
               <p className="textoCard">Interfaces intuitivas e experiências memoráveis</p>
             </div>
+
             <div className="cardDestaque">
               <div className="imgDev">
                 <img src="/foguete.svg" className="foguete"></img>
@@ -55,6 +107,7 @@ export default function Home() {
               <h3 className="titulo">Inovação</h3>
               <p className="textoCard">Sempre buscando novas tecnologias e soluções</p>
             </div>
+
           </div>
           <div className="divTextoSobreMim">
             <p className="textoSobreMim">
@@ -66,10 +119,11 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="habilidades">
+        <div className="habilidades" id="habilidades">
           <h2 className="titulos">Habilidades</h2>
           <p className="textoHabilidades">Um conjunto abrangente de tecnologias e ferramentas que utilizo para dar vida às minhas ideias.</p>
           <div className="cardsHabilidades">
+
             <div className="cardHabilidade">
               <div className="topoCardHab">
                 <div className="imgCardHab">
@@ -85,6 +139,7 @@ export default function Home() {
                 <span className="skill">CSS</span>
               </div>
             </div>
+
             <div className="cardHabilidade">
               <div className="topoCardHab">
                 <div className="imgCardHab">
@@ -99,6 +154,7 @@ export default function Home() {
                 <span className="skill">Node.js</span>
               </div>
             </div>
+
             <div className="cardHabilidade">
               <div className="topoCardHab">
                 <div className="imgCardHab">
@@ -111,6 +167,7 @@ export default function Home() {
                 <span className="skill">MySQL</span>
               </div>
             </div>
+            
             <div className="cardHabilidade">
               <div className="topoCardHab">
                 <div className="imgCardHab">
@@ -125,6 +182,7 @@ export default function Home() {
                 <span className="skill">Figma</span>
               </div>
             </div>
+
             <div className="cardHabilidade">
               <div className="topoCardHab">
                 <div className="imgCardHab">
@@ -139,11 +197,12 @@ export default function Home() {
                 <span className="skill">Kotlin</span>
               </div>
             </div>
+
           </div>
         </div>
 
 
-        <div className="projetos">
+        <div className="projetos" id="projetos">
           <h2 className="titulos">Projetos</h2>
           <p className="textoHabilidades">Falando sobre projetos bla bla bla</p>
           <div className="carrossel">
@@ -159,7 +218,7 @@ export default function Home() {
                  para quem não tem espaço físico.</p>
               <div className="linkGithubProjeto" >
                 <a href="https://github.com/joao0cb/Patas-da-Rua">
-                  <img src="/githubpreto.svg"></img>
+                  <img src="/githubcinza.svg" className="iconGithub"></img>
                   <span>Code</span>
                 </a>
               </div>
@@ -176,7 +235,7 @@ export default function Home() {
                 de compra, unindo alta performance e escalabilidade.</p>
               <div className="linkGithubProjeto" >
                 <a href="https://github.com/joao0cb/Projeto-Banco-De-Dados">
-                  <img src="/githubpreto.svg"></img>
+                  <img src="/githubcinza.svg" className="iconGithub"></img>
                   <span>Code</span>
                 </a>
               </div>
@@ -193,7 +252,7 @@ export default function Home() {
                 uma solução focada em precisão e eficiência para a documentação de dados históricos.</p>
               <div className="linkGithubProjeto" >
                 <a href="https://github.com/joao0cb/Projeto-Coliceu">
-                  <img src="/githubpreto.svg"></img>
+                  <img src="/githubcinza.svg" className="iconGithub"></img>
                   <span>Code</span>
                 </a>
               </div>
@@ -210,7 +269,7 @@ export default function Home() {
                 para persistência de dados.</p>
               <div className="linkGithubProjeto" >
                 <a href="https://github.com/joao0cb/Projeto-Tabela-Hash">
-                  <img src="/githubpreto.svg"></img>
+                  <img src="/githubcinza.svg" className="iconGithub"></img>
                   <span>Code</span>
                 </a>
               </div>
@@ -226,25 +285,20 @@ export default function Home() {
                 organização de notas e críticas personalizadas para cada obra musical selecionada.</p>
               <div className="linkGithubProjeto" >
                 <a href="https://github.com/joao0cb/Projeto-POO">
-                  <img src="/githubpreto.svg"></img>
+                  <img src="/githubcinza.svg" className="iconGithub"></img>
                   <span>Code</span>
                 </a>
               </div>
             </div>
 
-
           </div>
         </div>
 
-
-
-
-
-
-        <div className="contato">
+        <div className="contato" id="contato">
           <h2 >Vamos Conversar?</h2>
           <p className="textoContato">Estou sempre aberto a novos projetos e oportunidades. Entre em contato!</p>
           <div className="cardContato">
+
             <div className="infoContato">
               <h3>Informações de Contato</h3>
               <a href="mailto:joaovictorcastelobranco123@gmail.com" className="linkEmail">
@@ -263,16 +317,19 @@ export default function Home() {
                 </a>
               </div>
             </div>
+
             <div className="envieMsg">
               <h3>Envie uma Mensagem</h3>
-              <form className="formulario">
-                <input placeholder="Seu nome"></input>
-                <input placeholder="Seu email"></input>
-                <textarea placeholder="Sua mensagem" className="suaMsg"></textarea>
-                <button className="btnEnviarMsg">Enviar Mensagem</button>
+              <form className="formulario" onSubmit={enviarMailto}>
+                <input placeholder="Seu nome" value={nome} onChange={(e) => setNome(e.target.value)} required></input>
+                <input placeholder="Seu email" value={email} onChange={(e) => setEmail(e.target.value)} required></input>
+                <textarea placeholder="Sua mensagem" className="suaMsg" value={mensagem} onChange={(e) => setMensagem(e.target.value)} required></textarea>
+                <button className="btnEnviarMsg" type="submit">Enviar Mensagem</button>
               </form>
             </div>
+
           </div>
+
           <div className="footer">
             <p className="direitosR">© 2026 João Victor. Todos os direitos reservados.</p>
           </div>
