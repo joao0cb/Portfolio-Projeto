@@ -245,7 +245,7 @@ export default function Home() {
               <div className="imgProjeto">
                 <img src="/coliceu.jpeg" ></img>
               </div>
-              <h3 className="nomeProjeto">Projeto Coliceu</h3>
+              <h3 className="nomeProjeto">Coliceu</h3>
               <p className="descProjeto">Desenvolvido em Kotlin e Java, este aplicativo mobile 
                 centraliza o registro arqueológico em campo. O sistema permite o mapeamento de 
                 sítios via imagens, marcação de pontos-zero e catalogação ágil de artefatos. É 
