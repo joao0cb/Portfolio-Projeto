@@ -3,13 +3,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url(/bg.png);
+    background-image: light-dark(url(/bg.png), url(/bgdark.png));
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     color: white;
 }
-
 
 .info {
     display: flex;
@@ -17,7 +16,7 @@
     align-items: center;
     flex-direction: column;
     max-width: 100%;
-    margin: 80px 5vw 0 5vw;
+    margin: 100px 5vw 0 5vw;
     padding: 0 16px;
 }
 
@@ -34,6 +33,12 @@
     transition: 0.3s ease;
 }
 
+.topoAcoes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 .topo.scrolled {
     background-color: transparent;
     backdrop-filter: blur(8px);
@@ -41,11 +46,11 @@
 
 .topo.noSobre .logo,
 .topo.noSobre .navDesktop ul li a {
-    color: black;
+    color: light-dark(black, #f0f0f0);
 }
 
 .topo.noSobre .btnMenu span {
-    background-color: black;
+    background-color: light-dark(black, #f0f0f0);
 }
 
 .logo {
@@ -54,9 +59,9 @@
     color: white;
 }
 
-/* Menu desktop — escondido no mobile */
 .navDesktop {
     display: none;
+    margin-left: auto;
 }
 
 .navDesktop ul {
@@ -98,6 +103,16 @@
     background-color: white;
     border-radius: 2px;
     transition: all 0.3s ease;
+}
+
+.btnTemaMenu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .menuMobile {
@@ -180,7 +195,7 @@
     height: 230px;
     border-radius: 50%;
     overflow: hidden;
-    border: 5px solid #2c0b4c;
+    border: light-dark(5px solid #2c0b4c, 5px solid #17012b);
     margin: 0 0 24px;
 }
 
@@ -217,12 +232,17 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: white;
+    background-color: light-dark(#ffffff, #0d0d0d);
+    color: light-dark(#000000, #f0f0f0);
     padding: 60px 16px 0;
 }
 
 .titulos {
     font-size: clamp(40px, 4vw, 65px);
+    background: light-dark(none, linear-gradient(135deg, #9810fa, #e040fb));
+    -webkit-background-clip: light-dark(initial, text);
+    -webkit-text-fill-color: light-dark(#000000, transparent);
+    background-clip: light-dark(initial, text);
 }
 
 .destaques {
@@ -236,7 +256,8 @@ h1 {
 }
 
 .cardDestaque {
-    background-color: #f3f5ff;
+    background-color: light-dark(#f3f5ff, #17012b);
+    color: light-dark(#000000, #f0f0f0);
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -245,7 +266,6 @@ h1 {
     padding: 30px;
     width: 100%;
     gap: 20px;
-    transition: 0.3s ease;
 }
 
 .imgDev {
@@ -277,7 +297,7 @@ h1 {
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: #f3f5ff;
+    background-color: light-dark(#f3f5ff, #17012b);
     padding: 30px;
     border-radius: 20px;
     margin: 20px 0 75px 0;
@@ -296,13 +316,16 @@ h1 {
     flex-direction: column;
     width: 100%;
     gap: 20px;
-    background-color: #f9fafb;
+    background-color: light-dark(#f9fafb, #0d0d0d);
+    color: light-dark(#000000, #f0f0f0);
     padding: 60px 16px 0;
+    border-top: light-dark(none, 1px solid #555);
 }
 
 .textoHabilidades {
     font-size: 18px;
     text-align: center;
+    color: light-dark(#333333, #aaaaaa);
 }
 
 .cardsHabilidades {
@@ -312,6 +335,7 @@ h1 {
     flex-direction: column;
     width: 100%;
     margin-bottom: 40px;
+    color: #6c0db0;
 }
 
 .cardHabilidade {
@@ -321,10 +345,12 @@ h1 {
     flex-direction: column;
     padding: 24px;
     width: 100%;
-    border: 1px solid #cdced1 ;
+    border: 1px solid #cdced1;
+    background-color: light-dark(#ffffff, #17012b);
+    border-color: light-dark(#cdced1, transparent);
+    color: light-dark(#000000, #f0f0f0);
     border-radius: 20px;
     margin-bottom: 20px;
-    transition: 0.3s ease;
 }
 
 .topoCardHab {
@@ -354,7 +380,7 @@ h1 {
 }
 
 .skills span {
-    background-color: #e8e9eb;
+    background-color: light-dark(#e8e9eb, #2c0b4c);
     padding: 4px 12px;
     border-radius: 4px;
 }
@@ -364,7 +390,7 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url(/bg2.png);
+    background-image: light-dark(url(/bg2.png), url(/bg2dark.png));
     padding: 0 20px;
     color: white;
     gap: 20px;
@@ -373,6 +399,10 @@ h1 {
 .contato h2 {
     margin-top: 40px;
     font-size: clamp(35px, 4vw, 65px);
+    background: light-dark(none, linear-gradient(135deg, #9810fa, #e040fb));
+    -webkit-background-clip: light-dark(initial, text);
+    -webkit-text-fill-color: light-dark(white, transparent);
+    background-clip: light-dark(initial, text);
 }
 
 .textoContato {
@@ -465,7 +495,7 @@ h1 {
 
 .formulario input {
     background-color: rgba(255, 255, 255, 0.15);
-    border: 2px solid white;
+    border: light-dark(2px solid white, 2px solid #2c0b4c);
     border-radius: 10px;
     width: 100%;
     height: 40px;
@@ -476,7 +506,7 @@ h1 {
 
 .formulario textarea {
     background-color: rgba(255, 255, 255, 0.15);
-    border: 2px solid white;
+    border: light-dark(2px solid white, 2px solid #2c0b4c);
     border-radius: 10px;
     width: 100%;
     height: 40px;
@@ -488,14 +518,14 @@ h1 {
 
 .formulario input:focus, textarea:focus{
     outline: none;
-    border-color: #9810fa;
+    border-color: light-dark(#9810fa, #17012b);
     transition: all 0.3 ease;
 }
 
 .formulario button {
     width: 100%;
     height: 40px;
-    background-color: #9810fa;
+    background-color: light-dark(#9810fa, #17012b);
     border-radius: 10px;
     border: none;
     color: white;
@@ -528,10 +558,11 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: light-dark(white, #0d0d0d);
     flex-direction: column;
     padding: 60px 0 60px;
     gap: 20px;
+    border-top: light-dark(none, 1px solid #555);
 }
 
 .projetos h2,
@@ -556,7 +587,7 @@ h1 {
     flex-shrink: 0;
     width: 300px;
     min-width: 300px;
-    background: white;
+    background: light-dark(white, #17012b);
     scroll-snap-align: start;
     display: flex;
     justify-content: flex-start;
@@ -568,7 +599,7 @@ h1 {
 }
 
 .cardProjeto p {
-    color: #555;
+    color: light-dark(#555, white);
 }
 
 .imgProjeto {
@@ -713,7 +744,7 @@ h1 {
   }
 
   .cardDestaque:hover {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: light-dark(none, 0 2px 4px #9810fa);
   }
 
   .cardsHabilidades {
@@ -722,11 +753,11 @@ h1 {
 
   .cardHabilidade:hover {
     border-color: #9810fa;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: light-dark(none, 0 2px 4px #9810fa);
   }
 
   .cardHabilidade {
-    width: 250px;
+    width: 250px;   
     min-width: 250px;
     min-height: 200px;
     align-items: flex-start;
@@ -778,7 +809,7 @@ h1 {
     background-color: rgba(255, 255, 255, 0.2);
   }
 
-  .formualario button:hover {
+  .formulario button:hover {
     background-color: #6c0db0;
   }
 
@@ -809,11 +840,7 @@ h1 {
   }
 
   .cardDestaque:hover {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  .cardsHabilidades {
-    grid-template-columns: repeat(3, 1fr);
+    box-shadow: light-dark(0 5px 10px rgba(0, 0, 0, 0.2),  0 2px 4px #9810fa);
   }
 
   .cardHabilidade {
@@ -823,41 +850,17 @@ h1 {
     min-height: 168px;
   }
 
-  .cardHabilidade:hover {
-    border-color: #9810fa;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  }
-
   .carrossel {
-    grid-template-columns: repeat(3, 1fr);
     gap: 28px;
-  }
-
-  .imgProjeto:hover img {
-    transform: scale(1.1);
   }
 
   .cardContato {
     gap: 30px;
   }
 
-  .linkEmail:hover {
-    color: white;
-  }
-
-  .linksRedes:hover img {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-
-  .formualario button:hover {
-    background-color: #6c0db0;
-  }
-
   .infoContato,
   .envieMsg {
     padding: 40px;
     height: 382px;
-    align-items: flex-start;
-    justify-content:flex-start;
   }
 }

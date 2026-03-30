@@ -5,6 +5,44 @@
     scroll-behavior: smooth;
 }
 
+html {
+    color-scheme: light;
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+.btnTema {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    padding-left: 13px;
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: light-dark(#f1f1f1, #0f1729);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9810fa;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6c0db0;
+}
+
 body { background-color: light-dark(#f5f5dc, #0f1729); }
 
 [data-theme="light"] { color-scheme: only light; }
