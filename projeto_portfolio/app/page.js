@@ -197,7 +197,7 @@ export default function Home() {
 
         <div className="projetos" id="projetos">
           <h2 className="titulos">Projetos</h2>
-          <p className="textoHabilidades">Falando sobre projetos bla bla bla</p>
+          <p className="textoHabilidades">Uma seleção dos projetos que desenvolvi ao longo da minha jornada.</p>
           <div className="carrossel">
             <div className="cardProjeto">
               <div className="imgProjeto"><img src="/patasnarua.png" /></div>
