@@ -207,7 +207,7 @@ export default function Home() {
                 apadrinhamento financeiro e adoções. Conecta tecnologia ao cuidado animal
                 para quem não tem espaço físico.</p>
               <div className="linkGithubProjeto">
-                <a href="https://github.com/joao0cb/Patas-da-Rua">
+                <a href="https://github.com/joao0cb/Patas-da-Rua" target="_blank">
                   <img src="/githubcinza.svg" className="iconGithub" />
                   <span>Code</span>
                 </a>
@@ -221,7 +221,7 @@ export default function Home() {
                 O sistema foca na eficiência do controle de estoque e na fluidez dos processos
                 de compra, unindo alta performance e escalabilidade.</p>
               <div className="linkGithubProjeto">
-                <a href="https://github.com/joao0cb/Projeto-Banco-De-Dados">
+                <a href="https://github.com/joao0cb/Projeto-Banco-De-Dados" target="_blank">
                   <img src="/githubcinza.svg" className="iconGithub" />
                   <span>Code</span>
                 </a>
@@ -235,7 +235,7 @@ export default function Home() {
                 sítios via imagens, marcação de pontos-zero e catalogação ágil de artefatos. É
                 uma solução focada em precisão e eficiência para a documentação de dados históricos.</p>
               <div className="linkGithubProjeto">
-                <a href="https://github.com/joao0cb/Projeto-Coliceu">
+                <a href="https://github.com/joao0cb/Projeto-Coliceu" target="_blank">
                   <img src="/githubcinza.svg" className="iconGithub" />
                   <span>Code</span>
                 </a>
@@ -249,7 +249,7 @@ export default function Home() {
                 O projeto utiliza tabelas hash para armazenar livros e usuários, além de arquivos binários
                 para persistência de dados.</p>
               <div className="linkGithubProjeto">
-                <a href="https://github.com/joao0cb/Projeto-Tabela-Hash">
+                <a href="https://github.com/joao0cb/Projeto-Tabela-Hash" target="_blank">
                   <img src="/githubcinza.svg" className="iconGithub" />
                   <span>Code</span>
                 </a>
@@ -262,7 +262,7 @@ export default function Home() {
                 bibliotecas e avaliação de canções. É uma ferramenta prática e intuitiva, focada na
                 organização de notas e críticas personalizadas para cada obra musical selecionada.</p>
               <div className="linkGithubProjeto">
-                <a href="https://github.com/joao0cb/Projeto-POO">
+                <a href="https://github.com/joao0cb/Projeto-POO" target="_blank">
                   <img src="/githubcinza.svg" className="iconGithub" />
                   <span>Code</span>
                 </a>
@@ -288,8 +288,8 @@ export default function Home() {
                 <a href="https://www.linkedin.com/in/jo%C3%A3o-victor-castelo-branco-de-sena-20b624312/" target="_blank" className="linksRedes">
                   <img src="/linkedin.svg" />
                 </a>
-                <a href="https://www.instagram.com/joaoo.cb/" target="_blank" className="linksRedes">
-                  <img src="/insta.svg" />
+                <a href="/CurriculoJOAO.pdf" target="_blank" className="linksRedes">
+                  <img src="/file.svg" />
                 </a>
               </div>
             </div>

@@ -110,6 +110,9 @@ export default function Forca() {
           <div className="errosContador">
             <span>{erros}</span>/<span>{MAX_ERROS}</span>
           </div>
+          <button className="btnReiniciarHeader" onClick={reiniciar}>
+            Reiniciar
+          </button>
           <button className="btnTema" onClick={toggleTema} aria-label="Alternar tema">
             <span className="lua">🌙</span>
             <span className="sol">☀️</span>

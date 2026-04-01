@@ -50,6 +50,27 @@
   font-weight: 700;
 }
 
+.btnReiniciarHeader {
+  background: linear-gradient(135deg, #9810fa, #c040fb);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btnReiniciarHeader:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+.btnReiniciarHeader:active {
+  transform: scale(0.97);
+}
+
 .main {
   flex: 1;
   display: flex;
